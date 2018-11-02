@@ -1,0 +1,114 @@
+%=========================TAULES============================================================================================
+% Es crea una nova comanda per insertar una taula. En aquest cas estara dintre de la carpeta taules. Per tal de fer servir la comanda \taula{Nom del fitxer}{amplada} on amplada pot ser \linewidth que es l'amplada de la linia, es pot posar 0.7\linewidth pq sigui un 70% de l'amplada.
+\newcommand{\taula}[2]{\LTXtable{#2}{tables/#1}} 
+%\renewcommand{\tablename}{Tabla} %per posar tabla al caption de les taules
+
+%=========================INSERTAR IMATGES==================================================================================
+%Aquesta macro inserta una imatge centrada. Per tal de colocar la imatge s'ha de fer servir la comanda:
+%	\imatge{Nom fitxer dintre carpeta imatges}{Titol de la imatge}{Amplada}
+%	el \label queda definit com el nom del fitxer
+\newcommand{\imatge}[3]{
+ \begin{figure}[htb]
+  \begin{center}
+   %\includegraphics[width=#3cm,angle=-90]{#1}
+   \includegraphics[width=#3\linewidth]{#1}
+   \caption{#2}
+   \label{fig:#1}
+  \end{center}
+ \end{figure}
+}
+
+\newcommand{\imatgeR}[4]{
+ \begin{figure}[htb]
+  \begin{center}
+   \includegraphics[width=#3\linewidth,angle=#4]{#1}
+   \caption{#2}
+   \label{fig:#1}
+  \end{center}
+ \end{figure}
+}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!80!black},
+    urlcolor={blue!80!black}
+}
+
+% Espaiat a l'index
+%\setlength{\cftbeforechapskip}{0.1ex} % Nomes al report i altres amb \chapter
+\setlength{\cftbeforesecskip}{0.5ex}
+
+% Portada
+
+\newcommand{\authorname}{\textbf}
+\newcommand{\authorgroup}{\emph}
+\newcommand{\authoraddress}{\emph}
+\newcommand{\authormail}{\emph}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+%  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE\MakeUppercase \@title \par}%
+    \vskip 1.0em%
+    {\Large\subject{}}
+    \vskip 1.0em%
+    {\normalsize
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip -0.5em%  
+    {\large\bf Group: \group{}}
+    \vskip 1em%
+%    \vfill
+    {\large \@date, \city{}}%
+  \end{center}%
+  \par
+  \vskip -0.5em}
+\makeatother
+
+%Maketitle Conf______________________________________________________
+%\pretitle{\begin{center}\Large\MakeUppercase}
+%\posttitle{\\\subject{}\end{center}}
+
+%\preauthor{\begin{center}\normalsize \lineskip 0.5em\begin{tabular}[t]{c}}
+%\postauthor{\end{tabular}\par\end{center}}
+
+%\predate{\begin{center}\normalsize}
+%\postdate{, \city{}\par\end{center}}
+%_____________________________________________________________________
+
+
+% Headers___________________________________________________________
+
+\pagestyle{fancy}
+\fancyhead[L]{\subject{}, ESEIAAT, Group \group{}}
+\fancyhead[R]{\thedate{}, \city{}}
+
+\setlength{\headheight}{15pt} 
+
+%___________________________________________________________________
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand{\vnorm}[1]{\norm{\vec{#1}}}
+
+\sloppy % better line breaks
+
+\setlength{\nomitemsep}{-\parsep} % Nomenclature spacing
+
+\newcommand{\fref}[1]{Fig.~\ref{#1}}
+\newcommand{\tref}[1]{Tab.~(\ref{#1})}
+\newcommand{\eref}[1]{Eq.~(\ref{#1})}
+%\newcommand{\cref}[1]{Cap.~\ref{#1} \nameref{#1}} % \chapter references not available in article
+\newcommand{\sref}[1]{Sec.~\ref{#1} \nameref{#1}}
+\newcommand{\aref}[1]{Ap.~(\ref{#1})}
+\newcommand{\alref}[1]{Algorithm~\ref{#1}}
+\newcommand{\ejref}[1]{Ex.~(\ref{#1})}
+
+\DeclareSIUnit\curie{Ci}

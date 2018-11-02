@@ -1,0 +1,65 @@
+\newpage
+
+{\color{red}\textbf{Delete the following pages on the final report! If you use some of the equations explain them somewhere in your text.}}
+
+\section*{Form equations}
+
+\subsection*{Ellipse}
+
+\eref{eq:e_ellipse_urmu} defines the eccentricity of an elliptic orbit around an object of gravitational parameter $\mu$, knowing the velocity $\vec{u}$ at a radius $\vnorm{r}$.
+
+\begin{equation}\label{eq:e_ellipse_urmu}
+\vec{e} = \frac{\left(\vnorm{u}^2 - \frac{\mu}{\vnorm{r}}\right) \vec{r} - \left(\vec{r}\cdot\vec{u}\right) \vec{u}}{\mu}
+\end{equation}
+
+The true anomaly $\theta$ is defined by \eref{eq:theta_er}, where $\vec{e}$ is the eccentricity, as defined in \eref{eq:e_ellipse_urmu}, and $\vec{r}$ is the radius.
+
+\begin{equation}\label{eq:theta_er}
+\cos{\theta} = \frac{\vec{e}\cdot\vec{r}}{\vnorm{e} \vnorm{r}}
+\end{equation}
+
+\section*{Notes}
+
+Read the following commentaries and follow them:
+
+\begin{itemize}
+\item The assignment consists on completing the report. This is to complete the existing sections and to write the empty ones. A general structure of the report is proposed but you can change the empty sections if you like. Just keep it organized. Do not include the sections \textit{Form equations} and \textit{Notes} in the final document.
+
+\item Replace the group number, currently indicated as 'AB' for your group number; and replace the names of the authors (your names) for the names of the teachers.
+
+\item Detail the formulation used for each point of the report, but avoid repeating it. Instead make references to the sections where they are detailed the first time and indicate the values that are used. So try to define general formulation of orbital mechanics and apply it to answer the points of the report. A good strategy could be to create a section with the formulation needed across the report and refer to it in the results sections.
+
+\item Do not forget the units of any magnitude in the report, except if they are dimensionless. The units must be indicated also in the graphics.
+
+\item Present the graphics with interplanetary distances in astronomical units.
+
+\item Present the graphics in black with different styles of lines and/or points.
+
+\item Cite the sources you use. It is preferable to use references to books than digital content. If you use references to digital content, include the year and month on the cite. You can add the description of the cite in \textit{myrefs.bib} and use the command \textit{autocite} in the text. Example \autocite{franchini2008introduccion}.
+
+\item The script or code used to solve the problem must be delivered with the report. It has to be well organized and with commentaries explaining which point is being solved, and the major steps of each solution. We recommend to use C/C++, Python, Octave or Matlab; but fell free to use other languages as long as you indicate which one is being used.
+
+\item The grade you can achieve is not proportional to the number of pages. Actually it can be the opposite, if you talk too much you can say things that are not correct. So be concise and accurate.
+\end{itemize}
+
+Example to insert an image, the \fref{fig:etseiatlow} shows bla bla.
+
+% 0.7 is the size respect to \linewidth
+
+\begin{figure}[htb]
+  \centering
+   \includegraphics[width=0.7\linewidth]{etseiatlow}
+   \caption{Here goes the caption text.}
+   \label{fig:etseiatlow2}
+\end{figure}
+
+\imatge{etseiatlow}{Here goes the caption text.}{0.7}
+
+Another way to do it, the \fref{fig:etseiatlow2} shows bla bla.
+
+
+
+%\subsection*{Hyperbola}
+
+
+

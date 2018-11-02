@@ -1,0 +1,85 @@
+% To use the nomenclature: compile with makeindex %.nlo -s nomencl.ist -o %.nls in between pdflatex compilations
+
+\documentclass[a4paper,12pt,oneside]{article}
+
+\input{packages}
+\input{macros}
+
+\graphicspath{{./images/}{./images/fix/}}
+
+%\begin{figure}
+%  \centering
+%   \includegraphics[width=5cm]{shadow01}
+%   \caption[Model UAV Shadow-MK1 a la EETAC.]{%
+%    Model UAV Shadow-MK1 a la EETAC%
+%    \footnotemark{}%
+%   .}
+%   \label{fig:shadow01}
+%\end{figure}
+%\footnotetext{Extret de: \url{http://eetac.upc.edu/ca/node/616}}
+
+% ARTICLE DATA ENTRY_________________________________________________
+
+% Title_______________________________________________________
+
+\title{TITOL}
+
+% Authors_____________________________________________________
+
+\author{
+	\authorname{Jordi Alcón Clemente}\\
+	\authormail{\href{mailto:jordialconclemente@gmail.com}{jordialconclemente@gmail.com}}\\
+	\authorname{Jordi Alcón Clemente}\\
+	\authormail{\href{mailto:jordialconclemente@gmail.com}{jordialconclemente@gmail.com}}\\
+% 	\authorgroup{Universitat Politècnica de Catalunya, BarcelonaTech (UPC)}\\
+% 	\authorgroup{Escola Superior d’Enginyeries Industrial, Aeroespacial i Audiovisual de Terrassa}\\
+% 	\authoraddress{Terrassa Campus, C. Colom, 1 08222 Terrassa. Telèfon 93 739 8102 / 93 739 8200.}\\
+\\
+}
+
+\date{Mes 2018}
+
+\newcommand{\city}{Terrassa}
+\newcommand{\subject}{Assignatura}
+\newcommand{\group}{01}
+
+
+% Misc_____________________________________________________
+%\renewcommand{\nomname}{List of Symbols}
+\makenomenclature
+ 
+\renewcommand{\nompreamble}{The next list describes the symbols used within the body of the document:}
+
+\addbibresource{myrefs.bib}
+
+% Article Body_____________________________________________
+
+\begin{document}
+
+\maketitle \thispagestyle{empty}
+
+% Table Oof Contents________________________________________________
+\noindent\makebox[\linewidth]{\rule{0.8\textwidth}{1pt}}
+\newpage
+\tableofcontents
+\noindent\makebox[\linewidth]{\rule{0.8\textwidth}{1pt}}
+\input{MainMatter/foreword}
+\newpage
+\printnomenclature
+
+% Input main content________________________________________
+
+\input{MainMatter/problem_definition}
+\input{MainMatter/governing_equations}
+\input{MainMatter/results}
+\input{MainMatter/conclusions}
+
+\printbibliography[heading=bibintoc]
+
+
+\appendix
+\input{MainMatter/source_code}
+
+% \input{MainMatter/form_equations_notes}
+
+\end{document}

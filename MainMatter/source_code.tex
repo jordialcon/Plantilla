@@ -1,0 +1,33 @@
+\section{Source code}
+
+\lstset{%
+tabsize=2,
+postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+columns=fullflexible,
+breaklines=true,
+breakatwhitespace=true,
+literate={::}{}{0\discretionary{::}{}{::}}% line-break at ::
+         {->}{}{0\discretionary{->}{}{->}}% line-break at ->
+         {<<}{}{0\discretionary{<<}{}{<<}}% line-break at <<
+         {,}{}{0\discretionary{,}{}{,}}% line-break at ,
+         {-}{}{0\discretionary{-}{}{-}}% line-break at -
+}
+\lstinputlisting{codi.cpp}[language=C++]
+% \begin{lstlisting}[language=C++]
+% /*
+%  * Your code goes here or instead you can use the command:
+%  * \lstinputlisting{solution.cpp}[language=C++]
+%  * and comment the \begin and \end lstlisting
+%  * where solution.cpp is the name of the file that contains your code.
+%  */
+
+% double a_ellipse(double mu, double u, double r){
+% 	return mu*r / (2.0*mu - u*u * r);
+% } 
+
+% cout << "up0*up0 - 2*muT/(H+6371.0e3) = " << (up0*up0 - 2.0*muT/(H+6371.0e3)) << endl;
+
+% \end{lstlisting}
+
+
+%\lstinputlisting[language=C++]{solution.cpp}

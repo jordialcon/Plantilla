@@ -1,0 +1,55 @@
+\nomenclature{$\Delta V$}{Velocity impulse}
+\nomenclature{$H$}{Altitude}
+\nomenclature{$d_{SJ}$}{Jupiter orbital radius}
+\nomenclature{$d_{SE}$}{Earth orbital radius}
+\nomenclature{$d_p$}{Periapsis radius}
+\nomenclature{$d_a$}{Apoapsis radius}
+
+% \section*{Foreword}
+% \addcontentsline{file}{sec_unit}{entry}
+
+
+\section{Problem definition}\label{sec:problem_definition}
+
+A space vehicle has to be sent to Jupiter to perform some observations. This communication is aimed to describe the preliminary design of the trajectory in order to establish an initial $\Delta V$ budget for the mission. The proposed trajectory is to perform the escape from Earth and enter into an elliptical orbit around the Sun. This elliptical orbit is modified to encounter the Earth, where a natural gravity assist is performed. The gravity assist modifies the elliptical orbit around the Sun in order to intersect Jupiter's orbit. The study also considers another trajectory to compare with.
+
+The study contains the following points:
+
+\begin{enumerate}
+\item An initial $\Delta V$ is applied to escape from the Earth and enter into an elliptical orbit around the Sun.
+
+	\begin{enumerate}
+	\item \label{it:escape_two_steps_jupiter} Calculation of the minimum $\Delta V_{e}$ needed to escape from Earth as a function of the parking orbit altitude $(H_0)$. Once in orbit around the Sun, a second $\Delta V_{1J}$ is calculated, which is applied to modify the orbit into an ellipse with its apoapsis equal to the radius of Jupiter's orbit.
+	
+	\item \label{it:escape_one_step_jupiter} Calculation of the minimum $\Delta V_{0J}$ needed to escape from Earth as a function of the parking orbit altitude $(H_0)$. Considering that the resulting elliptic orbit around the Sun has its apoapsis equal to the radius of Jupiter's orbit. This maneuver is performed in a single $\Delta V_{0J}$.
+	
+	\item Based on the results of the previous cases the optimum parking altitude is selected for each case and used in the rest of the study, where needed.
+	\end{enumerate}
+
+\item Design of the trajectory from Earth to Jupiter.
+
+	\begin{enumerate}
+	\item \label{it:direct} A direct transfer maneuver to reach Jupiter, including a $\Delta V_{i}$ to insert the vehicle at Jupiter's orbit at the same altitude than Europa, is studied. The total $\Delta V_T$ needed and the travel time to reach Jupiter are computed.
+
+	\item \label{it:gravity_assist} Different trajectories with a single $\Delta V_{0}$ to escape from Earth, another $\Delta V_{1}$ to modify the trajectory to encounter Earth and perform the gravity assist, and a last $\Delta V_{i}$ to insert the vehicle at Jupiter's orbit at the same altitude than Europa are studied.
+    
+    For a $\Delta V_{0} = 4 \si{[km/s]}$ and $\Delta V_{1} = -650 \si{[m/s]}$ the following results are presented. \textit{Note: Use the angles solution of the smallest quadrant.}
+    \begin{enumerate}
+    \item Radius of apoapsis of the Jupiter's approach elliptic orbit as a function of the periapsis of the gravity assist.
+    \item The heliocentric velocity of the vehicle after the gravity assist $(\vnorm{u_{v+}})$ as a function of the periapsis of the gravity assist.
+    \item The velocity at the apoapsis of the Jupiter's approach elliptic orbit $(\vnorm{u_{a3}})$, as a function of the periapsis of the gravity assist.
+    \item The total $\Delta V_T$ budget as a function of the periapsis of the gravity assist.
+    \item The elliptical orbits and intersection points for a single value of the periapsis of the gravity assist are plotted, so a scale plot is provided.
+    \end{enumerate}
+    
+    \item A study to minimize the $\Delta V_T$ budget for the trajectory with the gravity assist is conducted. The design variables are the two first $\Delta V$'s and the periapsis of the gravity assist. Explain the methodology used to perform the minimization and provide graphs to facilitate the comprehension of the results. \textit{Note: Be careful with solutions that are not physically possible, for example gravity assist trajectory entering the atmosphere.}
+    
+	\end{enumerate}
+
+\item Schemes of the different orbits and trajectories are presented for all of the studied trajectories.
+
+\item \textit{\textbf{As a bonus}, Compute the travel time form Earth to Jupiter for the trajectory \ref{it:gravity_assist} with a periapsis altitude for the gravity assist equal to $H_{\pi} = 450 \si{[km]}$. (Maximum 1 additional point)} \textbf{Hint: Search bibliography for mean anomaly and eccentric anomaly.}
+\end{enumerate}
+
+
+

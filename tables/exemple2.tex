@@ -1,0 +1,68 @@
+% Per separar les columnes es fa servir el & i per canviar a la fila inferior el \\
+% Si voleu colocar una linea horitzontal heu de colocar \hline despres de la fila on volgueu la linea
+
+\renewcommand{\tablename}{Taula}
+                  %%%%%%%  Tantes X (majuscules) com columnes. Els | son per les linies verticals (AltGrf+1)
+\begin{longtable}{|X|X|X|}
+         %%%%%%%%%%%
+\caption{Titolet}   %Introduir el titol de la taula
+       %%%%%%%%%
+\label{fran}\\      %Etiqueta, serveix per fer referencies creuades, posar el nom del fitxer
+
+       %%%%%%%%%%%%%%% Copy paste de dalt a baix, es la capalera de columna. Si en cal una de xunga aviseu.
+\hline the & head& line\\ \hline \endfirsthead
+\hline test & test & test \\
+\hline the & head& line\\ \hline \endhead
+
+                    % El 3 son el numero de columnes
+\hline \multicolumn{3}{|r|}{\scriptsize{Continua a la pgina segent $\hookrightarrow$}}\\ \hline \endfoot
+\hline \endlastfoot
+
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+a & b & c\\
+\end{longtable}
